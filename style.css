@@ -1,0 +1,119 @@
+/* ---------------- RESET ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- PAGE ---------------- */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #3e3535;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    /* stack navbar on top, grid below */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+    height: 50px;
+    background-color: #929090;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+}
+
+.logo {
+    height: 40px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    background: #555;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.tab {
+    padding: 8px 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.tab.active {
+    background-color: black;
+    border-radius: 20px;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-btn img {
+    height: 28px;
+}
+
+/* ---------------- MAIN GRID ---------------- */
+.container {
+    /* fills space below navbar */
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* ---------------- BOXES ---------------- */
+.box {
+    border: 1px solid yellow;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* IMPORTANT for grid layouts */
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/* ---------------- WIDGET COLUMN ---------------- */
+.widgets {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 180px 1fr;
+    }
+
+    .widgets {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
