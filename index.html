@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Focusly</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +27,48 @@
     <div class="container">
 
         <div class="sidebar box">
-            Sidebar
+            <h3>Menu</h3>
+            <ul>
+                <li><button>Dashboard</button></li>
+                <li><button>To-Do</button></li>
+                <li><button>Notes</button></li>
+            </ul>
+
+            <h3>Filters</h3>
+            <ul>
+                <li><button>☀️ My Day</button></li>
+                <li><button>📅 Upcoming</button></li>
+                <li><button>⭐ Important</button></li>
+            </ul>
+
+            <h3>Tags</h3>
+            <ul>
+                <li><button>#Personal</button></li>
+                <li><button>#Work</button></li>
+                <li><button>#development</button></li>
+            </ul>
         </div>
 
         <div class="main box">
-            Main Content
+
+            <div class="todo-container">
+                <h2>To-Do List</h2>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Enter New Task">
+                    <button>Add task</button>
+                </div>
+
+                <div class="task-list">
+                    <ul>
+                        <li><input type="checkbox">wake up<button><img src="assets/delete.png"></button></li>
+                        <li><input type="checkbox">wake up<button><img src="assets/delete.png"></button></li>
+                        <li><input type="checkbox">wake up<button><img src="assets/delete.png"></button></li>
+                        <li><input type="checkbox">wake up<button><img src="assets/delete.png"></button></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
         <div class="widgets">
@@ -41,4 +79,5 @@
     </div>
 
 </body>
+
 </html>

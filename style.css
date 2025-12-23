@@ -1,3 +1,14 @@
+/*------------colors-------*/
+:root{
+    --bg-main:#e6e6e6;
+    --card-bg:#ffffff;
+    --card-text:#000000;
+    --btn-text:#ffffff;
+    --btn-bg:#5d09c4;
+}
+
+
+
 /* ---------------- RESET ---------------- */
 * {
     margin: 0;
@@ -11,19 +22,20 @@ html, body {
 }
 
 body {
-    background-color: #3e3535;
+    background-color: var(--bg-main);
     font-family: Arial, sans-serif;
-    color: white;
-
+    color: #000000;
     /* stack navbar on top, grid below */
     display: flex;
     flex-direction: column;
+    max-width: 1600px;
 }
 
 /* ---------------- NAVBAR ---------------- */
 .navbar {
     height: 50px;
-    background-color: #929090;
+    background-color: #ffffff;
+    border-radius: 40px;
 
     display: flex;
     align-items: center;
@@ -65,22 +77,27 @@ body {
     height: 28px;
 }
 
+ul{
+    list-style: none;
+}
+
 /* ---------------- MAIN GRID ---------------- */
 .container {
     /* fills space below navbar */
     flex: 1;
 
     display: grid;
-    grid-template-columns: 200px 1fr 250px;
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: 250px 1fr 280px;
+    gap: 15px;
+    padding: 15px;
 }
 
 /* ---------------- BOXES ---------------- */
 .box {
-    border: 1px solid yellow;
+    border: 1px solid black;
     border-radius: 6px;
     padding: 10px;
+    background-color: var(--card-bg);
 
     /* IMPORTANT for grid layouts */
     min-height: 0;
@@ -91,13 +108,131 @@ body {
 .widgets {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
 }
+
+/*------sidebar-------*/
+
+.sidebar h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul{
+    padding: 0;
+    margin-bottom: 30px;
+}
+.sidebar li{
+    margin: 5px;
+    font-size: 30px;  
+    font-weight: 500;
+}
+.sidebar button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/*----------------Main Section----------*/
+
+.main{
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.todo-container{
+    max-width: 700px;
+}
+.main h2{
+    text-align: center;
+    margin: 20px;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-bar input{
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(221, 219, 219);
+    width: 380px;
+    height: 40px;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.search-bar button{
+    height: 40px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+}
+
+.task-list{
+    position: relative;
+    height: auto;
+}
+
+.task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 10px;
+    margin-left: 14px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.task-list input{
+    position: absolute;
+    left: 4px;
+    transform: scale(1.2);
+
+}
+
+.task-list button{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.task-list img{
+    height: 20px;
+    width: 19px;
+    border-radius: 50%;
+
+}
+
+.task-list button:hover{
+    background-color: #a572f3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------------- RESPONSIVE ---------------- */
 
 /* Tablet */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .container {
         grid-template-columns: 180px 1fr;
     }
@@ -105,10 +240,10 @@ body {
     .widgets {
         display: none;
     }
-}
+} */
 
 /* Mobile */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .container {
         grid-template-columns: 1fr;
     }
@@ -116,4 +251,4 @@ body {
     .sidebar {
         display: none;
     }
-}
+} */
