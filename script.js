@@ -60,6 +60,12 @@ function saveTask() {
 
 function renderTask() {
     list.innerHTML = "";
+
+    if(allTasks.length === 0)
+    {
+        list.innerHTML = `<div class = "empty-msg"><p> Not any tasks yet</p></div>`
+    }
+
     allTasks.forEach(function(task, index) {
         // FIXED: Added data-index="${index}" to the checkbox too, 
         // so we can easily find it in the event listener above.
@@ -83,3 +89,31 @@ function loadTask() {
 }
 
 loadTask();
+
+
+
+//----------section change-----------
+
+const todo_btn = document.getElementById("to-do-btn");
+const notes_btn = document.getElementById("notes-btn");
+
+const todo_sec = document.getElementById("todo");
+const notes_sec = document.getElementById("notes");
+
+todo_btn.addEventListener('click',() => {
+    todo_btn.classList.add("active");
+    notes_btn.classList.remove("active");
+
+    todo_sec.classList.remove("hidden");
+    notes_sec.classList.add("hidden");
+
+})
+
+notes_btn.addEventListener('click',() => {
+    notes_btn.classList.add("active");
+    todo_btn.classList.remove("active");
+
+    notes_sec.classList.remove("hidden");
+    todo_sec.classList.add("hidden");
+
+})

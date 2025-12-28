@@ -14,8 +14,8 @@
         <img src="assets/logo.png" class="logo" alt="Logo">
 
         <div class="tabs">
-            <a href="#" class="tab active">To-Do</a>
-            <a href="#" class="tab ">Notes</a>
+            <a href="#" class="tab active" id="to-do-btn">To-Do</a>
+            <a href="#" class="tab " id="notes-btn">Notes</a>
         </div>
 
         <button class="theme-btn">
@@ -26,12 +26,12 @@
     <!-- MAIN GRID AREA -->
     <div class="container">
 
-        <div class="sidebar box">
+        <!-- <div class="sidebar box">
             <h3>Menu</h3>
             <ul>
                 <li><button>Dashboard</button></li>
-                <li><button>To-Do</button></li>
-                <li><button>Notes</button></li>
+                <li><button id="to-do-btn">To-Do</button></li>
+                <li><button id="notes-btn">Notes</button></li>
             </ul>
 
             <h3>Filters</h3>
@@ -47,13 +47,19 @@
                 <li><button>#Work</button></li>
                 <li><button>#development</button></li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="main box">
 
             <section id="todo">
             <div class="todo-container">
                 <h2>To-Do List</h2>
+
+                <div class="filter-tabs">
+                <button class="tab active">All</button>
+                <button class="tab">☀️ My Day</button>
+                <button class="tab">⭐ Important</button>
+            </div>
 
                 <div class="search-bar">
                     <input type="text" placeholder="Enter New Task" id="input">
@@ -71,6 +77,38 @@
 
             </div>
             </section>
+
+            <section id="notes" class="hidden">
+
+                <div id="notes-container">
+
+                    <h2>My Notes</h2>
+
+                    <div class="notes-boxes">
+                        <div class="note-card">
+                            <h3>Shopping</h3>
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum totam maiores distinctio quam neque fuga accusamus nisi est. Saepe alias laudantium natus autem. Tempore reprehenderit earum alias beatae error quidem.
+                            Labore exercitationem praesentium molestiae totam placeat illo nesciunt voluptatum a pariatur fugiat distinctio odit ratione laboriosam, error esse odio adipisci eaque eligendi, iure sequi veniam provident. Facere laboriosam distinctio mollitia?
+                            </p>
+                        </div>
+
+                        <div class="note-card">
+                            <h3>Shopping</h3>
+                            <p> milk, food, snacks......
+                            </p>
+                        </div>
+
+                        <div class="note-card">
+                            <h3>Shopping</h3>
+                            <p> milk, food, snacks......
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
         </div>
 
         <div class="widgets">
