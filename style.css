@@ -54,6 +54,7 @@ body {
     background: #555;
     border-radius: 20px;
     overflow: hidden;
+
 }
 
 .tab {
@@ -180,6 +181,9 @@ ul{
 .task-list{
     position: relative;
     height: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    min-height: 400px;
 }
 
 .task-list li{
@@ -237,6 +241,29 @@ ul{
 
 .hidden{
     display: none;
+}
+
+.filter-tabs{
+    display: flex;
+    background: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 3px;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.filter-tabs .tab{
+    border: none;
+    background: transparent;
+    color: #000000;
+}
+
+.filter-tabs .active{
+    background-color: #000000;
+    color: #ffffff;
+
 }
 
 /*---------------notes--------------*/
