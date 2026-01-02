@@ -269,11 +269,10 @@ ul{
 /*---------------notes--------------*/
 
 #notes{
-    outline: 1px solid red;
     max-width: 580px;
     width: 100%;
+    position: relative;
 }
-
 .notes-boxes{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
@@ -307,6 +306,45 @@ ul{
   word-break: break-word;
 }
 
+
+.noteAdd{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    outline: 1px solid red;
+}
+#addNote-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    background: transparent;
+    border: 1px dashed black;
+    transition: transform 0.5s ease;
+
+}
+
+#addNote-btn:hover{ 
+    /* transform: scale(1.1);
+    animation: spinScale 0.5s linear; */
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* @keyframes spinScale {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: scale(1.1) rotate(90deg);
+    }
+    50%{
+        transform: scale(1.1) rotate(180deg);
+    }
+    100%{
+        transform: scale(1.1) rotate(270deg);
+    }
+    
+} */
 
 
 
