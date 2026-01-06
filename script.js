@@ -117,3 +117,10 @@ notes_btn.addEventListener('click',() => {
     todo_sec.classList.add("hidden");
 
 })
+
+
+//-----------Notes Functionalities-----------
+
+let allNotes = [];
+
+const saveNote = document.getElementById('save-note');

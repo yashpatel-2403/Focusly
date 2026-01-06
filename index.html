@@ -92,18 +92,6 @@
                             </p>
                         </div>
 
-                        <div class="note-card">
-                            <h3>Shopping</h3>
-                            <p> milk, food, snacks
-                            </p>
-                        </div>
-
-                        <div class="note-card">
-                            <h3>Shopping</h3>
-                            <p> milk, food, snacks
-                            </p>
-                        </div>
-
                         <div class="noteAdd">
                             <span class="text">Add Notes</span>
                             <button id="addNote-btn">+ </button>
@@ -122,7 +110,22 @@
         </div>
 
     </div>
+
+<div id="note-modal" class="modal">
+    <div class="modal-content">
+        <h2>New Note</h2>
+        <input type="text" id="note-title" placeholder="Title (e.g., Shopping List)">
+        <textarea id="note-body" placeholder="Type your note details here..."></textarea>
+        
+        <div class="modal-buttons">
+            <button id="cancel-note" class="btn-cancel">Cancel</button>
+            <button id="save-note" class="btn-save">Save Note</button>
+        </div>
+    </div>
+</div>
+
 <script src="script.js"></script>
+
 </body>
 
 </html>

@@ -285,6 +285,7 @@ ul{
     border-radius: 15px;
     padding: 10px;
     min-height: 150px;
+    max-width: 200px;
     margin-top: 10px;
 }
 
@@ -311,8 +312,8 @@ ul{
     position: absolute;
     bottom: 20px;
     right: 20px;
-    outline: 1px solid red;
 }
+
 #addNote-btn{
     height: 50px;
     width: 50px;
@@ -321,53 +322,85 @@ ul{
     background: transparent;
     border: 1px dashed black;
     transition: transform 0.5s ease;
-
+    cursor: pointer;
 }
 
-#addNote-btn:hover{ 
-    /* transform: scale(1.1);
-    animation: spinScale 0.5s linear; */
+#addNote-btn:hover{
     transform: rotate(360deg) scale(1.1);
 }
 
-/* @keyframes spinScale {
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: scale(1.1) rotate(90deg);
-    }
-    50%{
-        transform: scale(1.1) rotate(180deg);
-    }
-    100%{
-        transform: scale(1.1) rotate(270deg);
-    }
-    
-} */
+.modal{
+    height: 300px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 350px;
+    /* position: relative; */
+    /* margin: 10px; */
+    /* padding: 10px; */
+}
+
+.modal-content h2{
+    /* position: absolute; */
+    top: 10px;
+}
+
+#note-title{
+    /* background-color: pink; */
+    border: 1px solid black;
+    border-radius: 30px;
+    height: 40px;
+    width: 320px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#note-body{
+   /* background-color: pink; */
+    border: 1px solid black;
+    border-radius: 20px;
+    min-height: 150px;
+    max-width: 320px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    /* height: 30px; */
+    /* border: 1px solid black; */
+    border-radius: 20px;
+}
+
+.btn-cancel, .btn-save{
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 0px 20px;
+    height: 32px;
+    color: white;
+    cursor: pointer;
+}   
 
 
+.btn-cancel{
+    background-color: red;
+}
 
-/* ---------------- RESPONSIVE ---------------- */
+.btn-save{
+    background-color: var(--btn-bg);
+}
 
-/* Tablet */
-/* @media (max-width: 900px) {
-    .container {
-        grid-template-columns: 180px 1fr;
-    }
-
-    .widgets {
-        display: none;
-    }
-} */
-
-/* Mobile */
-/* @media (max-width: 600px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        display: none;
-    }
-} */
