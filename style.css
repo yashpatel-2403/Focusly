@@ -273,6 +273,7 @@ ul{
     width: 100%;
     position: relative;
 }
+
 .notes-boxes{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
@@ -287,6 +288,7 @@ ul{
     min-height: 150px;
     max-width: 200px;
     margin-top: 10px;
+    position: relative;
 }
 
 .note-card h3{
@@ -299,7 +301,7 @@ ul{
     line-height: 1.6;
     word-spacing: 2px;
     display: -webkit-box;
-  -webkit-line-clamp: 4; /* number of lines */
+  -webkit-line-clamp: 3; /* number of lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
 
@@ -307,6 +309,16 @@ ul{
   word-break: break-word;
 }
 
+.delete-note-btn{
+    border: 1px solid red;
+    padding: 3px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 35%;
+    width: 60px;
+    cursor: pointer;
+}
 
 .noteAdd{
     position: absolute;
@@ -337,6 +349,8 @@ ul{
     background-color: #fff;
 }
 
+
+
 .modal-content{
     display: flex;
     justify-content: center;
@@ -346,13 +360,12 @@ ul{
     width: 350px;
     /* position: relative; */
     /* margin: 10px; */
-    /* padding: 10px; */
+    padding: 10px;
 }
 
-.modal-content h2{
-    /* position: absolute; */
-    top: 10px;
-}
+/* .modal-content h2{
+    margin-top: 10px;
+} */
 
 #note-title{
     /* background-color: pink; */
@@ -370,6 +383,7 @@ ul{
     border: 1px solid black;
     border-radius: 20px;
     min-height: 150px;
+    width: 320px;
     max-width: 320px;
     font-size: 20px;
     padding: 10px;
@@ -384,6 +398,12 @@ ul{
     /* height: 30px; */
     /* border: 1px solid black; */
     border-radius: 20px;
+}
+
+#empty-note{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .btn-cancel, .btn-save{
