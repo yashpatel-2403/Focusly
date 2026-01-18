@@ -304,6 +304,7 @@ ul{
   -webkit-line-clamp: 3; /* number of lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
+  white-space: pre-wrap;
 
   line-height: 1.4;
   word-break: break-word;
@@ -341,14 +342,51 @@ ul{
     transform: rotate(360deg) scale(1.1);
 }
 
-.modal{
+/* .modal{
     height: 300px;
     width: 350px;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #fff;
+    position: absolute;
+    top: 200px;
+    left: 30%;
+} */
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    
+    /* 1. Keep your dark tint, but maybe make it slightly lighter */
+    background: rgba(0, 0, 0, 0.4); 
+    
+    /* 2. ADD THIS LINE (The Blur Effect) */
+    backdrop-filter: blur(8px);
+    
+    /* Keep your flexbox centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: smooth 500ms ease;
 }
 
+@keyframes smooth {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.modal.hidden{
+    display: none;
+}
 
 
 .modal-content{
@@ -358,6 +396,9 @@ ul{
     flex-direction: column;
     height: 300px;
     width: 350px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
     /* position: relative; */
     /* margin: 10px; */
     padding: 10px;

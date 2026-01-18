@@ -141,15 +141,15 @@ function renderNotes() {
 
     notebox.innerHTML = "";
 
-    allNotes.forEach((task) => {
-        const title = task.title;
-        const body = task.body;
+    allNotes.forEach((note, index) => {
+        const title = note.title;
+        const body = note.body;
 
         notebox.innerHTML += `<div class="note-card">
                             <h3>${title}</h3>
-                            <p> ${body}
+                            <p>${body}
                             </p>
-                            <button class="delete-note-btn">Delete</button>
+                            <button class="delete-note-btn" data-index="${index}">Delete</button>
                         </div>`;
     });
 }
@@ -195,6 +195,22 @@ cancelNoteBtn.addEventListener("click", () => {
     inpBody.value = "";
     noteModal.classList.add("hidden");
 });
+
+notebox.addEventListener('click', (e) => {
+    if(e.target.classList.contains("delete-note-btn"))
+    {
+        const index = e.target.getAttribute("data-index");
+
+        const conf= confirm("Are you sure?");
+        if(conf){
+        allNotes.splice(index, 1);
+
+        saveNotesToLocal();
+        renderNotes();
+        }
+
+    }
+})
 
 
 loadNotes();
